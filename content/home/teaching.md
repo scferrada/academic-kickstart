@@ -1,20 +1,21 @@
 +++
-# Custom widget.
 # An example of using the custom widget to create your own homepage section.
 # To create more sections, duplicate this file and edit the values below as desired.
-widget = "custom"
-active = true
-date = "2016-04-20T00:00:00"
 
-# Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
-title = "Custom Section"
+date = "2016-04-20T00:00:00"
+draft = false
+
+title = "Teaching"
 subtitle = ""
+widget = "custom"
 
 # Order that this section will appear in.
 weight = 60
 
 +++
 
-This is an example of using the *custom* widget to create your own homepage section.
+I am a teaching and laboratory assistant for the following courses at Universidad de Chile, during 2017 spring term:
 
-To remove this section, either delete `content/home/teaching.md` or edit the frontmatter of the file to deactivate the widget by setting `active = false`.
+- <a href="http://users.dcc.uchile.cl/~sferrada/teaching/cc3201-2017-2">CC3201</a>: Databases
+
+You can find material following the links. For a list of all courses you may visit <a href="http://users.dcc.uchile.cl/~sferrada/teaching/">this page</a>.
