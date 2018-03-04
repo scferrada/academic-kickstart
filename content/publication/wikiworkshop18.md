@@ -15,7 +15,7 @@ authors = ["Sebastián Ferrada", "Nicolás Bravo", "Benjamin Bustos", "Aidan Hog
 # 4 = Report
 # 5 = Book
 # 6 = Book section
-publication_types = ["8"]
+publication_types = ["7"]
 
 # Publication name and optional abbreviated version.
 publication = "In Proceedings of the *4th Wiki Workshop*, Lyon, France"
