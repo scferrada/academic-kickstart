@@ -1,5 +1,5 @@
 +++
-title = "Test"
+title = "AMW 2017 School - Poster Session"
 date = 2017-06-05T17:00:00-02:00  # Schedule page publish date.
 draft = false
 
