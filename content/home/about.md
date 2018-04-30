@@ -34,7 +34,7 @@ weight = 1
 
 # Biography
 
-I'm Sebastián Ferrada, a Doctoral Candidate at the Institute for Foundations of Data at Universidad de Chile. 
+I'm Sebastián Ferrada, a Doctoral Candidate at the Institute for Foundational Research on Data at Universidad de Chile. 
 My research interests include Information Retrieval, Data Mining & Visualization, Multimedia Databases and Linked Data. 
 I'm currently developing my PhD thesis regarding the combination of semantic and visual similarity queries using Semantic Web technologies, you can learn more by visiting the <a href="http://imgpedia.dcc.uchile.cl">IMGpedia project site</a>.
 
