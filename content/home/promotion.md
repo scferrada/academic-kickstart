@@ -1,16 +1,17 @@
 +++
 # An example of using the custom widget to create your own homepage section.
 # To create more sections, duplicate this file and edit the values below as desired.
-
-ate = "2016-04-20T00:00:00"
-draft = false
+widget = "blank"
+headless = true 
+active = true
+weight = 60
 
 title = "Self Promotion"
 subtitle = ""
-widget = "custom"
 
-# Order that this section will appear in.
-weight = 50
+[design]
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns = "2"
 
 +++
 
