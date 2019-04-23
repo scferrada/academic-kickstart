@@ -1,7 +1,8 @@
 +++
 # Projects widget.
-widget = "projects"
+widget = "portfolio"
 active = true
+headless = true
 date = "2016-04-20T00:00:00"
 
 title = "Projects"
@@ -10,35 +11,29 @@ subtitle = ""
 # Order that this section will appear in.
 weight = 50
 
-# Content.
-# Display content from the following folder.
-# For example, `folder = "project"` displays content from `content/project/`.
-folder = "project"
 
-# View.
-# Customize how projects are displayed.
-# Legend: 0 = list, 1 = cards.
-view = 1
+[content]
+  # Page type to display. E.g. project.
+  page_type = "project"
+  
+  # Filter toolbar (optional).
+  # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
+  # To show all items, set `tag` to "*".
+  # To filter by a specific tag, set `tag` to an existing tag name.
+  # To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
 
-# Filter toolbar.
+[design]
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns = "2"
 
-# Default filter index (e.g. 0 corresponds to the first `[[filter]]` instance below).
-filter_default = 0
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   3 = Card
+  #   5 = Showcase
+  view = 3
 
-# Add or remove as many filters (`[[filter]]` instances) as you like.
-# Use "*" tag to show all projects or an existing tag prefixed with "." to filter by specific tag.
-# To remove toolbar, delete/comment all instances of `[[filter]]` below.
-# [[filter]]
-#   name = "All"
-#   tag = "*"
-#  
-# [[filter]]
-#   name = "Deep Learning"
-#   tag = ".deep-learning"
-#
-# [[filter]]
-#   name = "Other"
-#   tag = ".demo"
+  # For Showcase view, flip alternate rows?
+  flip_alt_rows = false
 
 +++
 
