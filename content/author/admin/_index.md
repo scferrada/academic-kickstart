@@ -9,11 +9,11 @@ authors = ["admin"]
 superuser = true
 
 # Role/position
-role = "PhD Candidate in Computer Science"
+role = "PhD (c) in Computer Science"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-organizations = [ { name = "Institute for Foundational Research on Data", url = "https://imfd.cl/en/" }, {name="Department of Computer Science", url="http://dcc.uchile.cl"}, {name="Universidad de Chile", url="http://uchile.cl"} ]
+organizations = [ { name = "Institute for Foundational Research on Data", url = "https://imfd.cl/en/" }, {name="Dep. of Computer Science", url="http://dcc.uchile.cl"}, {name="U. de Chile", url="http://uchile.cl"} ]
 
 # Short bio (displayed in user profile at end of posts)
 bio = "Chilean PhD. Student in CS. Love to read, dance and drink coffee."
