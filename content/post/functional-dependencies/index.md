@@ -4,10 +4,9 @@ highlight = true
 math = true
 tags = ["Databases", "Relational Design", "Functional Dependencies"]
 title = "Llaves y Dependencias Funcionales"
+draft = false
+authors = ["admin"]
 
-[header]
-  caption = ""
-  image = ""
 
 +++
 

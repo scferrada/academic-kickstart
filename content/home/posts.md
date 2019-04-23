@@ -25,11 +25,5 @@ weight = 40
   # Page order. Descending (desc) or ascending (asc) date.
   order = "desc"
 
-# Filter posts by tag.
-#  By default, show all recent posts.
-#  Filtering example: `tags_include = ["hugo", "academic"]`
-tags_include = []
-tags_exclude = []
-
 +++
 

@@ -1,13 +1,9 @@
 +++
 date = "2018-10-29T14:43:23-03:00"
-highlight = true
-math = true
 tags = ["Databases", "Relational Model", "Database Normalization", "Normal Forms"]
 title = "Formas Pokenormales"
-
-[header]
-  caption = ""
-  image = ""
+authors = ["admin"]
+draft = false
 
 +++
 

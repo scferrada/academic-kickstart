@@ -18,9 +18,8 @@ tags = ["Visualization"]
 # Optional external URL for project (replaces project detail page).
 external_link = "http://constitucionabierta.cl"
 
-# Does the project detail page use math formatting?
-math = false
+# Featured image
+# To use, add an image named `featured.jpg/png` to your project's folder. 
+[image]
 
 +++
-
-Project Managed by Jorge Perez.

@@ -1,13 +1,10 @@
 +++
 date = "2017-10-26T18:43:23-03:00"
-highlight = true
 math = false
 tags = ["IMGpedia", "ISWC", "Linked Data", "Multimedia"]
 title = "IMGpedia, la importancia de incluir multimedia en la Web de Datos"
-
-[header]
-  caption = ""
-  image = ""
+authors = ["admin"]
+draft = false
 
 +++
 
