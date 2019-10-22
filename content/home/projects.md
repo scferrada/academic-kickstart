@@ -21,6 +21,7 @@ weight = 50
   # To show all items, set `tag` to "*".
   # To filter by a specific tag, set `tag` to an existing tag name.
   # To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
+  filter_default = 0
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.

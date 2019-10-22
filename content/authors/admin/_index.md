@@ -9,14 +9,14 @@ authors = ["admin"]
 superuser = true
 
 # Role/position
-role = "PhD (c) in Computer Science"
+role = "PhD. c. in Computer Science"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
 organizations = [ { name = "Institute for Foundational Research on Data", url = "https://imfd.cl/en/" }, {name="Dep. of Computer Science", url="http://dcc.uchile.cl"}, {name="U. de Chile", url="http://uchile.cl"} ]
 
 # Short bio (displayed in user profile at end of posts)
-bio = "Chilean PhD. Student in CS. Love to read, dance and drink coffee."
+bio = "Chilean PhD. Candidate in CS. Loves to read, dance and drink coffee."
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email = ""
@@ -28,10 +28,6 @@ interests = [
     "Linked Data",
     "Multimedia Databases"
 ]
-
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
-#user_groups = ["Researchers", "Visitors"]
 
 # List qualifications (such as academic degrees)
 [[education.courses]]
@@ -82,9 +78,8 @@ My research interests include Information Retrieval, Data Mining & Visualization
 I'm currently developing my PhD thesis regarding the combination of semantic and visual similarity queries using Semantic Web technologies, you can learn more by visiting the <a href="http://imgpedia.dcc.uchile.cl">IMGpedia project site</a>.
 
 Besides research I really enjoy teaching. 
-Currently I'm teaching the Relational Databases Course of the <a href="https://www.dcc.uchile.cl/datos">Data Science Diploma</a> at the Department of Computer Science (<a href="http://dcc.uchile.cl">DCC</a>) and 
-I've been teaching assistant in the Databases course for undergrads for over three years. 
-I have worked in many other areas and courses such as Algorithm Analysis and Programming Design Methodologies, you may find a complete list having a look at my <a href="/pdf/cv.pdf">resumé</a>. 
+Currently I'm teaching the Relational Databases Course for undergrads and at the <a href="https://www.dcc.uchile.cl/datos"> Data Science Diploma</a>,  at the Department of Computer Science (<a href="http://dcc.uchile.cl">DCC</a>) and 
+I have worked as T.A. in many other areas and courses such as Algorithm Analysis and Programming Design Methodologies, you may find a complete list having a look at my <a href="/pdf/cv.pdf">resumé</a>. 
 I have also done some extracurricular volunteer teaching at <a href="http://www.preumeduchile.cl/">Preumed</a>, 
 <a href="https://sites.google.com/a/capsocial.cl/capsocial/">Capsocial</a> and 
 <a href="http://escuela.ingenieria.uchile.cl/vida-estudiantil/127291/grupos-organizados">Apoyo Escolar</a>.
