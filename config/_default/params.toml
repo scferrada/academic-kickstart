@@ -24,6 +24,8 @@ font = "minimal"
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
 font_size = "M"
 
+media_dir = "img"
+
 ############################
 ## Basic Info
 ############################
@@ -135,23 +137,12 @@ time_format = "15:04"
 # Address format (choose from the [address_formats] list below or add you own to the list).
 address_format = "en-us"
 
-[address_formats]
-  en-us = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ' ', '']}
-  en-gb = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ', ', '']}
-  de = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
-  fr-fr = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
-  zh = {order = ['postcode', 'region', 'city', 'street'], delimiters = [' ', ' ', ' ', '']}
-
-
 ############################
 ## Advanced
 ############################
 
-# Get user avatars from Gravatar.com? (true/false)
-gravatar = false
-
-# Align the main menu to the right of the page? (true/false)
-menu_align_right = true
+# Main menu alignment (l = left, c = center, r = right) and logo options.
+main_menu = {align = "l", show_logo = true}
 
 # Show estimated reading time for posts? (true/false)
 reading_time = true
@@ -166,9 +157,48 @@ sharing = true
 # Link authors to their profile page? (true/false)
 link_authors = true
 
+# Abstract length (characters) in the Compact and Portfolio Card list views. Also, see `summaryLength` in `config.toml`.
+abstract_length = 135
+
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
 plugins_js  = []
+
+# PLACE THESE PARAMS IN THE MAIN CONFIG SECTION (NOT UNDER ANY [SUBSECTION])
+   
+# Show related content at the bottom of pages?
+show_related = {docs = true, page = false, post = true, project = true, publication = true, talk = true}
+   
+# Show a copyright license from creativecommons.org in the site footer?
+# Page specific copyright licenses are also possible by adding this option to a page's front matter.
+copyright_license = {enable = false, allow_derivatives = false, share_alike = true, allow_commercial = false, notice = "This work is licensed under {license}"}
+   
+# Highlight the site author (superuser) in author lists? (true/false)
+highlight_superuser = false
+   
+############################
+## Icon Pack Extensions
+############################
+[icon.pack]
+ ai = true  # Academicons icon pack https://jpswalsh.github.io/academicons/
+
+# Avatars.
+# An avatar is an image that appears next to a user's name.
+# An avatar can be uploaded as an image named `avatar` to each user's profile or fetched from Gravatar.com.
+[avatar]
+  # Get user avatars from Gravatar.com? (true/false)
+  gravatar = false
+
+  # Choose a shape for avatar images. Options: circle, square.
+  shape = "circle"
+  
+[address_formats]
+  en-us = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ' ', '']}
+  en-gb = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ', ', '']}
+  de = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
+  fr-fr = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
+  zh = {order = ['postcode', 'region', 'city', 'street'], delimiters = [' ', ' ', ' ', '']}
+
 
 # Configuration of publication pages.
 [publications]
@@ -198,7 +228,7 @@ plugins_js  = []
   #   0: Disabled
   #   1: Disqus (https://disqus.com)
   #   2: Commento (https://commento.io)
-  engine = 0
+  engine = 1
 
   # Which page types are commentable?
   commentable = {page = true, post = true, docs = true, project = true, publication = true, talk = true}
@@ -220,7 +250,11 @@ plugins_js  = []
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
-
+  [search.algolia]
+    app_id = ""
+    api_key = ""
+    index_name = ""
+    show_logo = false
 
 ############################
 ## Maps
@@ -248,3 +282,12 @@ plugins_js  = []
 [marketing]
   google_analytics = "UA-98676305-1"
   google_tag_manager = ""
+
+# PLACE THIS NEW [CMS] CONFIG SECTION AT THE END OF THE FILE
+  
+############################
+## Content Management System
+############################
+[cms]
+ # See https://sourcethemes.com/academic/docs/install/
+ netlify_cms = true

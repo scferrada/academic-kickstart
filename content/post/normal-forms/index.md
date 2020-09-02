@@ -21,13 +21,17 @@ entrenadores. En la Tabla 1, se muestra una forma sobre cómo organizar nuestros
 del entrenador y la segunda contiene una lista con las criaturas capturadas por dicho entrenador. La llave de la tabla es el nombre del entrenador
 por lo que se muestra en negrita y cursiva.
 
+<center>
+
 | ***Entrenador*** | Pokemon |
 |------------|---------|
 | Ash        | [Pikachu, Caterpie, Charmander, ...]|
 | Misty      | [Staryu, Goldeen, Starmie, ...]     |
 | Gary       | [Krabby, Nidoking, Arcanine, ...]   |
 
-<center>**Tabla 1:** Entrenadores y sus Pokémon </center>
+</center>
+
+<center><b>Tabla 1</b>: Entrenadores y sus Pokémon </center>
 
 Como se puede adivinar, es al menos extraño el manejar listas de elementos en una base de datos relacional. El utilizar ese tipo de estructuras
 en un atributo de una tabla puede producir dificultades al momento de implementar la base de datos. ¿Las colecciones pueden tener un tamaño máximo?
@@ -41,6 +45,8 @@ tanto el nombre del entrenador como el del Pokémon. El resultado puede apreciar
 tanto el nombre del entrenador como el nombre del Pokémon son la llave de la tabla. (Efectivamente esto restringe que un mismo entrenador
 capture dos pokémon del mismo nombre. ¿Cómo solucionar esto?)
 
+<center>
+
 | ***Entrenador*** | ***Pokemon*** |
 |------------|---------|
 | Ash        | Pikachu |
@@ -49,7 +55,9 @@ capture dos pokémon del mismo nombre. ¿Cómo solucionar esto?)
 | Misty      | Staryu |
 | ...		 | ... |
 
-<center>**Tabla 2:** Entrenadores y sus Pokémon, un valor por celda </center>
+</center>
+
+<center><b>Tabla 2:</b> Entrenadores y sus Pokémon, un valor por celda </center>
 
 Cuando tenemos una relación como la de la Tabla 2, decimos que cada atributo tiene valores atómicos, es decir, valores que no son colecciones
 (conjuntos, listas, etc.). Este tipo de relaciones están en **Primera Forma Normal**.
@@ -60,6 +68,8 @@ con lo que veníamos haciendo en la Tabla 2, podríamos proponer un esquema como
 el nombre del entrenador y el del pokémon, sin embargo, al agregar también la fecha de captura a la llave podemos admitir que un entrenador
 capture más de un pokémon de la misma especie en momentos diferentes.
 
+<center>
+
 | ***Entrenador*** | Origen | ***Pokemon*** | Tipo | HP | ***Fecha Captura***|
 |------------|---------|----------|-----|------|-----------|
 | Ash        | Pueblo Paleta |Pikachu | Eléctico |35 | 01-04-1997 10:20|
@@ -67,7 +77,10 @@ capture más de un pokémon de la misma especie en momentos diferentes.
 | Ash        | Pueblo Paleta |Charmander | Fuego | 39 | 05-04-1997 19:12|
 | Misty      | Ciudad Celeste |Staryu | Agua | 30 | 22-03-1995 09:44|
 
-<center>**Tabla 3:** Entrenadores y sus Pokémon, con datos del entrenador, Pokémon y captura </center>
+
+**Tabla 3:** Entrenadores y sus Pokémon, con datos del entrenador, Pokémon y captura 
+
+</center>
 
 En el modelo de la Tabla 3, podemos encontrar varios problemas. Primero notamos que hay redundancia, pues cada vez que un entrenador capture 
 un nuevo pokémon debemos repetir su ciudad de origen. Esto conlleva varias anomalías consigo, las cuales vamos a enumerar:
@@ -98,13 +111,15 @@ para los entrenadores, otra para las especies de pokémon y otra para las captur
 Bastó en este caso con tomar las dependencias funcionales *Entrenador* $\rightarrow$ *Origen* y *Pokémon* $\rightarrow$ *Tipo* y extraerlas en tablas aparte. Finalmente,
 se agrega la tabla de capturas.
 
+<center>
+
 | ***Entrenador*** | Origen |
 |------------|---------|
 | Ash        | Pueblo Paleta |
 | Misty      | Ciudad Celeste |
 | Gary | Pueblo Paleta |
 
-<center>**Tabla 4:** Entrenadores y sus ciudades de origen</center>
+**Tabla 4:** Entrenadores y sus ciudades de origen
 
 | ***Pokemon*** | tipo |
 |------------|---------|
@@ -112,7 +127,7 @@ se agrega la tabla de capturas.
 | Caterpie   | Insecto |
 | Staryu | Agua |
 
-<center>**Tabla 5:** Especies de pokémon y sus tipos</center>
+**Tabla 5:** Especies de pokémon y sus tipos
 
 | ***Entrenador*** | ***Pokemon*** | HP | ***Fecha Captura***|
 |------------|---------|----------|-----|
@@ -121,7 +136,9 @@ se agrega la tabla de capturas.
 | Ash         |Charmander | 39 |  05-04-1997 19:12|
 | Misty       |Staryu | 30 | 22-03-1995 09:44|
 
-<center>**Tabla 6:** Entrenadores y sus pokémon</center>
+**Tabla 6:** Entrenadores y sus pokémon
+
+</center>
 
 El conjunto de las tablas 4, 5 y 6 cumple ahora con 2NF. Supongamos ahora que además del pueblo de origen del entrenador, queremos
 también saber la región de la que provienen, como se ve en la Tabla 7. En dicha tabla, es fácil notar que se cumple la dependencia funcional
@@ -130,6 +147,8 @@ Por ejemplo, si queremos modificar el pueblo de origen, tenemos que tomar en cue
 La naturaleza del problema es distinta a la anterior. Acá no hay una dependencia parcial a una llave, sino que hay atributos no primos
 determinando funcionalmente a otros.
 
+<center>
+
 | ***Entrenador*** | Origen | Región |
 |------------|---------|-----|
 | Ash        | Pueblo Paleta | Kanto |
@@ -137,7 +156,9 @@ determinando funcionalmente a otros.
 | Gary | Pueblo Paleta | Kanto |
 | Professor Kukui | Hau'oli | Alola |
 
-<center>**Tabla 7:** Entrenadores y sus ciudades y regiones de origen</center>
+**Tabla 7:** Entrenadores y sus ciudades y regiones de origen
+
+</center>
 
 La **Tercera Forma Normal** (3NF) nos permite eliminar este tipo de anomalías. Un esquema está en 3NF sí está en segunda forma normal 
 y ningún atributo no primo depende transitivamente de una llave candidata. La última condición también puede expresarse como que todos los
@@ -163,13 +184,17 @@ dependencias funcionales son (1) *Entrenador* $\rightarrow$ *Origen*, (2) *Entre
 entonces las tablas resultantes van a ser (Entrenador, Origen) y (Origen, Región) pues la (2), al ser transitiva de (1) y (3) se elimina. No es necesario
 agregar una tabla para la llave pues es simplemente Entrenador. La primera tabla puede apreciarse en Tabla 4 y la segunda en Tabla 8.
 
+<center>
+
 | ***Pueblo***| Región |
 |---------|-----|
 | Pueblo Paleta | Kanto |
 | Ciudad Celeste | Kanto |
 | Hau'oli | Alola |
 
-<center>**Tabla 8:** Pueblos y las regiones a las que pertenecen </center>
+**Tabla 8:** Pueblos y las regiones a las que pertenecen 
+
+</center>
 
 ¿Estamos listos entonces? Falta un poco, aunque muchas veces se considera que un esquema en 3NF está lo suficientemente normalizado,
 aún hay ciertas cosas que pueden surgir.
@@ -177,15 +202,19 @@ aún hay ciertas cosas que pueden surgir.
 Supongamos ahora una tabla para guardar los duelos contra líderes de gimnasio. Vamos a suponer que un gimnasio puede tener solo un líder
 y que ese líder pertenece solo a un gimnasio. Podemos ver datos de ejemplo en la Tabla 9.
 
+<center>
+
 |Lider | Entrenador | Gimnasio | Fecha | Ganador |
 |------|------------|----------|-------|---------|
 |Brock | Ash        |Ciudad Plateada | 03-04-1997 | Brock |
 |Brock | Ash		|Ciudad Plateada | 04-04-1997 | Nadie |
 |Misty | Ash 		|Ciudad Celeste  | 18-04-1997 | Empate |
 
-<center>**Tabla 9:** Registro de duelos en gimnasios </center>
+**Tabla 9:** Registro de duelos en gimnasios 
 
-Podemos inferir que una llave es esta tabla es {Lider, Entrenador, Fecha}, pero dadas las dependencias funcionales {Lider}$\rightarrow${Gimnasio} y {Gimnasio}$\rightarrow${Lider}
+</center>
+
+Podemos inferir que una llave es esta tabla es $\set{Lider, Entrenador, Fecha}$, pero dadas las dependencias funcionales {Lider}$\rightarrow${Gimnasio} y {Gimnasio}$\rightarrow${Lider}
 tenemos que otra llave candidata es {Entrenador, Gimnasio, Fecha}. Dadas las definiciones anteriores, la Tabla 9 está en 3FN. Sin embargo, aún
 pueden surgir anomalías de edición: ¿Qué pasa si queremos cambiar el nombre del gimnasio? Es requerido cambiarlo en todas partes.
 ¿Entonces normalizar hasta 3NF no es suficiente? Pues hay una forma de normalización superior a 3NF que evita este tipo de problemas.
@@ -196,6 +225,7 @@ es lo que produce las anomalías. En general es extraño encontrar tablas que es
 existen llaves candidatas que se traslapan, es decir, que comparten atributos.
 
 El algoritmo que se sigue para normalizar es el siguiente:
+
 ```
 Input: C ={(R0, F0)} # Esquema y dependencias iniciales
 Output: N # Esquema normalizado en FNBC
@@ -223,6 +253,7 @@ se prefiere lo contrario.
 [^2]:Un subconjunto propio es un subconjunto con cardinalidad estrictamente menor que el conjunto original, es decir $R\subsetneq S$
 
 ## Referencias
+
 1. Codd, Edgar F. "A relational model of data for large shared data banks." Communications of the ACM 13.6 (1970): 377-387.
 2. Codd, Edgar F. "Recent Investigations into Relational Data Base Systems." IBM Research Report RJ1385 (April 23, 1974).
 3. Ramakrishnan, Raghu, and Johannes Gehrke. Database management systems. McGraw Hill, 2000.
